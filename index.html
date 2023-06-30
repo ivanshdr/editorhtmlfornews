@@ -1,0 +1,46 @@
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="editor.css">
+<script src="editor.js"></script>
+<table class="tableno" border="0" style="width: 91%; border-collapse: collapse; margin-left: auto; margin-right: auto;">
+<tbody>
+<tr style="height: 38px;">
+<td style="width: 100%;">
+<br><p style="text-align: center;"><font face="Helvetica" size="7">| news script |</font></p><br>
+<hr color="#ccc" size="1"><!-- <p style="text-align: center;">
+<button><font face="Helvetica">домой</font></button> 
+<button><font face="Helvetica">создать</font></button> 
+<button><font face="Helvetica">редактировать</font></button> 
+<button><font face="Helvetica">комментарии</font></button> 
+<button><font face="Helvetica">настройки</font></button> 
+<button><font face="Helvetica">журнал действий</font></button> 
+<button><font face="Helvetica">выйти</button>
+</p><hr color="#ccc" size="1"> -->
+
+<font face="Helvetica"><h1>новая заметка</h1></font>
+    <button onclick="insertTag('<h1>', '</h1>')"><b>h1</b></button>
+    <button onclick="insertTag('<h2>', '</h2>')"><b>h2</b></button>
+    <button onclick="insertTag('<h3>', '</h3>')"><b>h3</b></button>
+    <button onclick="insertTag('<h4>', '</h4>')"><b>h4</b></button>
+    <button onclick="insertTag('<h5>', '</h5>')"><b>h5</b></button>
+    <button onclick="insertTag('<b>', '</b>')"><b>B</b></button>
+    <button onclick="insertTag('<i>', '</i>')"><i>I</i></button>
+    <button onclick="insertTag('<u>', '</u>')"><u>U</u></button>
+    <button onclick="insertTag('<ul>', '</ul><br>')">Список</button>
+    <button onclick="insertTag('<li>', '</li>')">Элемент списка</button>
+<button onclick="insertTag('<code>', '</code>')"><b>code</b></button>
+    <button onclick="insertLink()">Ссылка</button>
+    <button onclick="toggleResult()">Показать/скрыть результат</button>
+    <br><form method="post" enctype='multipart/form-data' action="create.php">
+    <input type="text" name="subject" placeholder="название"></input>
+    <textarea id="editor" rows="10" name="note" cols="80" placeholder="заметка"></textarea>    
+    <input type="file" name="file" placeholder="файл"></input>
+    <input type="text" name="tag" placeholder="тег"></input>
+    <div id="result" class="hidden"></div>
+    <input type="submit">
+    
+</form>
+</td>
+</tr>
+</tbody>
+</table>
